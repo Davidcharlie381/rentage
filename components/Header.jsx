@@ -1,5 +1,11 @@
-
 import { BiUser, BiMenu } from "react-icons/bi";
+import NavLink from "./NavLink";
+
+const links = [
+  { name: "Home", path: "/" },
+  { name: "Browse properties", path: "properties" },
+  { name: "Add your own listing", path: "add-properties" },
+];
 
 const Header = () => {
   return (
@@ -30,14 +36,16 @@ const Header = () => {
               </svg>
             </div>
             <ul className="md:flex justify-between gap-10 text-[15px] leading-5 font-bold hidden">
-              <li className="font-bold">Home</li>
-              <li className="">Browse properties</li>
-              <li>Add your own listing</li>
+              {links.map((link) => (
+                <NavLink path={link.path} name={link.name} />
+              ))}
               <li className="font-bold text-orange">Subscribe</li>
             </ul>
           </div>
           <div className="flex items-center gap-5">
-            <span className="md:hidden font-bold text-orange text-[15px]">Subscribe</span>
+            <span className="md:hidden font-bold text-orange text-[15px]">
+              Subscribe
+            </span>
             <div className="md:hidden text-4xl">
               <BiMenu />
             </div>

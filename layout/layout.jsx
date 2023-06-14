@@ -1,3 +1,4 @@
+import FooterSection from "@/components/FooterSection";
 import Header from "@/components/Header";
 
 const Layout = ({ children }) => {
@@ -6,6 +7,7 @@ const Layout = ({ children }) => {
       <meta />
       <Header />
       <main>{children}</main>
+      <FooterSection />
     </>
   );
 };

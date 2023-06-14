@@ -14,7 +14,6 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <PlacesSection />
-        <FooterSection />
       </Layout>
       
     

@@ -1,15 +1,14 @@
 import Image from "next/image";
 import { BiSearch } from "react-icons/bi";
 import heroImage from "../public/home_hero.png";
+import { FirstHeading } from "./Heading";
 
 const HeroSection = () => {
   return (
     <section className="bg-lightBlue pt-14 md:pt-10">
       <div className="container md:flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-1/2">
-          <h1 className="font-extrabold text-[40px] md:text-[55px] md:leading-[72px] md:max-w-lg leading-[48px] tracking-[0.005em] mb-12">
-            We're here to help you find your new home
-          </h1>
+          <FirstHeading text="We're here to help you find your new home"/>
           <form className="flex mb-3">
             <input
               type="text"
@@ -41,7 +40,7 @@ const HeroSection = () => {
       >
         <path
           fill="#fff"
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,96L120,106.7C240,117,480,139,720,128C960,117,1200,75,1320,53.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
         ></path>
       </svg>
