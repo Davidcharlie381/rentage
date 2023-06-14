@@ -4,7 +4,7 @@ import heroImage from "../public/home_hero.png";
 
 const HeroSection = () => {
   return (
-    <section className="bg-lightBlue pt-14 md:pt-20">
+    <section className="bg-lightBlue pt-14 md:pt-10">
       <div className="container md:flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-1/2">
           <h1 className="font-extrabold text-[40px] md:text-[55px] md:leading-[72px] md:max-w-lg leading-[48px] tracking-[0.005em] mb-12">
@@ -25,7 +25,7 @@ const HeroSection = () => {
             sale.
           </p>
         </div>
-        <div className="mt-10 ml-20 md:-mr-40 w-2/3">
+        <div className="mt-10 ml-20  w-2/3">
           <Image
             src={heroImage}
             // width={370}
@@ -34,7 +34,17 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" className="-mt-[68px] md:-mt-[250px]" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,256L80,256C160,256,320,256,480,256C640,256,800,256,960,229.3C1120,203,1280,149,1360,122.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="-mt-[65px] md:-mt-[130px]"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,96L120,106.7C240,117,480,139,720,128C960,117,1200,75,1320,53.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        ></path>
+      </svg>
     </section>
   );
 };
