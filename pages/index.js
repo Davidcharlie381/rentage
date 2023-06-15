@@ -1,21 +1,14 @@
-import FooterSection from '@/components/FooterSection'
-import HeroSection from '@/components/HeroSection'
-import PlacesSection from '@/components/PlacesSection'
-import ServicesSection from '@/components/ServicesSection'
-import Layout from '@/layout/layout'
-import { Montserrat } from 'next/font/google'
-
-const mont = Montserrat({ subsets: ['latin'] })
+import HeroSection from "@/components/HeroSection";
+import PlacesSection from "@/components/PlacesSection";
+import ServicesSection from "@/components/ServicesSection";
+import Layout from "@/layout/layout";
 
 export default function Home() {
   return (
-    
-      <Layout>
-        <HeroSection />
-        <ServicesSection />
-        <PlacesSection />
-      </Layout>
-      
-    
-  )
+    <Layout>
+      <HeroSection />
+      <ServicesSection />
+      <PlacesSection />
+    </Layout>
+  );
 }

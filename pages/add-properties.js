@@ -1,9 +1,12 @@
-import React from 'react'
+import PropertiesHero from "@/components/PropertiesHero";
+import Layout from "@/layout/layout";
 
 const AddProperty = () => {
   return (
-    <div>AddProperty</div>
-  )
-}
+    <Layout>
+      <PropertiesHero text="Add property" />
+    </Layout>
+  );
+};
 
-export default AddProperty
+export default AddProperty;

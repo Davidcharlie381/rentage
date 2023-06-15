@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="bg-lightBlue pt-14 md:pt-10">
       <div className="container md:flex flex-col md:flex-row justify-center items-center">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 md:max-w-lg">
           <FirstHeading text="We're here to help you find your new home"/>
           <form className="flex mb-3">
             <input

@@ -16,7 +16,7 @@ const SectionHeading = ({ text, underline, para }) => {
 
 const FirstHeading = ({ text }) => {
   return (
-    <h1 className="font-extrabold text-[40px] md:text-[55px] md:leading-[72px] md:max-w-lg leading-[48px] tracking-[0.005em] mb-12">
+    <h1 className="font-extrabold text-[40px] md:text-[55px] md:leading-[72px] leading-[48px] tracking-[0.005em] mb-12">
       {text}
     </h1>
   );
