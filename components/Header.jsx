@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { BiUser, BiMenu } from "react-icons/bi";
+import LoginCard from "./LoginCard";
 import NavLink from "./NavLink";
 
 const links = [
@@ -8,6 +10,8 @@ const links = [
 ];
 
 const Header = () => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <>
       <header className="bg-lightBlue py-2 md:py-6">
@@ -49,7 +53,12 @@ const Header = () => {
             <div className="md:hidden text-4xl">
               <BiMenu />
             </div>
-            <div className="hidden md:block text-2xl">
+            <div
+              className="relative hidden md:block text-2xl"
+              onMouseOver={() => setHovered(true)}
+              // onMouseOut={() => setHovered(false)}
+            >
+              {hovered && <LoginCard setHovered={setHovered} />}
               <BiUser />
             </div>
           </div>
