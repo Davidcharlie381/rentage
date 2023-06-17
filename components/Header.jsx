@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { BiUser, BiMenu } from "react-icons/bi";
 import LoginCard from "./LoginCard";
@@ -6,7 +7,7 @@ import NavLink from "./NavLink";
 const links = [
   { name: "Home", path: "/" },
   { name: "Browse properties", path: "/properties" },
-  { name: "Add your own listing", path: "/add-properties" },
+  { name: "Add your own listing", path: "/add-property" },
 ];
 
 const Header = () => {
@@ -43,13 +44,13 @@ const Header = () => {
               {links.map((link) => (
                 <NavLink path={link.path} name={link.name} />
               ))}
-              <li className="font-bold text-orange">Subscribe</li>
+              <Link href="/select-a-plan" className="font-bold text-orange">Subscribe</Link>
             </ul>
           </div>
           <div className="flex items-center gap-5">
-            <span className="md:hidden font-bold text-orange text-[15px]">
+            <Link href="/select-a-plan" className="md:hidden font-bold text-orange text-[15px]">
               Subscribe
-            </span>
+            </Link>
             <div className="md:hidden text-4xl">
               <BiMenu />
             </div>

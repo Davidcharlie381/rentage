@@ -35,7 +35,7 @@ const HeroSection = () => {
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="-mt-[65px] md:-mt-[130px]"
+        className="-mt-[45px] md:-mt-[130px]"
         viewBox="0 0 1440 320"
       >
         <path

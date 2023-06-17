@@ -14,7 +14,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-white pt-14">
+    <section className="bg-white pt-1">
       <div className="container pb-14">
         <SectionHeading
           text="Professional services, delivered with care"
