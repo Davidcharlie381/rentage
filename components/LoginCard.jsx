@@ -12,7 +12,7 @@ const LoginCard = ({setHovered}) => {
       <div className="border-b-[0.2px] mb-4" />
       <Link
         href="/login"
-        className="m-4 p-2 px-4 bg-orange rounded-md text-sm font-bold text-white"
+        className="m-4 p-2 px-4 bg-orange hover:bg-black rounded-md text-sm font-bold text-white"
       >
         LOGIN
       </Link>

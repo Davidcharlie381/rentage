@@ -18,7 +18,7 @@ const Header = () => {
       <header className="bg-lightBlue py-2 md:py-6">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-10">
-            <div className="">
+            <Link href="/" className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 // width="50"
@@ -39,7 +39,7 @@ const Header = () => {
                   transform="translate(73.85 12.219)"
                 ></path>
               </svg>
-            </div>
+            </Link>
             <ul className="md:flex justify-between gap-10 text-[15px] leading-5 font-bold hidden">
               {links.map((link) => (
                 <NavLink path={link.path} name={link.name} />

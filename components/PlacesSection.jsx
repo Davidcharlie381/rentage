@@ -66,7 +66,7 @@ const PlacesSection = () => {
         <div className="mx-auto grid place-content-center mt-7 md:mt-10 text-3xl md:text-6xl">
           <AiOutlineArrowUp />
         </div>
-        <h2 className="text-[1.75rem] leading-9 md:leading-[52px] md:max-w-lg mx-auto md:text-[2.75rem] font-extrabold text-center mt-8 md:mt-10">
+        <h2 className="text-[1.75rem] leading-9 md:leading-[52px] md:max-w-xl mx-auto md:text-[2.75rem] font-extrabold text-center mt-8 md:mt-10">
           Join our community, and get the best deals
         </h2>
       </div>
