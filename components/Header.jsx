@@ -10,8 +10,8 @@ const links = [
   { name: "Add your own listing", path: "/add-property" },
 ];
 
-const Header = () => {
-  const [hovered, setHovered] = useState(false);
+const Header = ({handleClose}) => {
+  const [hovered, setHovered] = useState(false)
 
   return (
     <>
@@ -51,7 +51,7 @@ const Header = () => {
             <Link href="/select-a-plan" className="md:hidden font-bold text-orange text-[15px]">
               Subscribe
             </Link>
-            <div className="md:hidden text-4xl">
+            <div className="md:hidden text-4xl" onClick={handleClose}>
               <BiMenu />
             </div>
             <div

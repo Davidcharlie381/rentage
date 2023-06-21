@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const NavLink = ({ path, name }) => {
+const NavLink = ({ path, name, nav }) => {
   const router = useRouter();
   const location = router.asPath;
 
@@ -10,8 +10,8 @@ const NavLink = ({ path, name }) => {
   return (
     <Link href={path}>
       <li
-        className={`text-[15px] leading-5 font-bold ${
-          active ? "text-black" : "text-black/50"
+        className={`${nav ? "text-[21px]" : "text-[15px]"} leading-5 font-bold ${
+          active && nav ? "text-orange" : active ? "text-black" : "text-black/50"
         }`}
       >
         {name}
