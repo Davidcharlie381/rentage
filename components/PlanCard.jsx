@@ -15,18 +15,17 @@ const PlanCard = ({ plan, period }) => {
       <div className="bg-black h-[1px] mt-1 w-10" />
       <div className="flex gap-2">
         <h2 className="font-extrabold text-4xl mt-4">
-          ${plan.period && period === "annually" ? plan.price * 10 : plan.price}
+          $
+          {plan.price > 0 && period === "annually"
+            ? plan.price * 10
+            : plan.price}
         </h2>
         {plan.name !== "Free" && (
           <div className=" self-end">
             {plan.period && period === "monthly" ? (
-              <span className="text-base text-black/50 font-bold">
-                / Month
-              </span>
+              <span className="text-base text-black/50 font-bold">/ Month</span>
             ) : (
-              <span className="text-base text-black/50 font-bold">
-                / Year
-              </span>
+              <span className="text-base text-black/50 font-bold">/ Year</span>
             )}
           </div>
         )}
@@ -35,8 +34,8 @@ const PlanCard = ({ plan, period }) => {
         {plan.description}
       </p>
       <ul className="mt-8 md:mt-10 flex flex-col gap-2 md:h-[250px]">
-        {plan.benefits.map((benefit) => (
-          <li className="flex gap-3 items-center">
+        {plan.benefits.map((benefit, idx) => (
+          <li className="flex gap-3 items-center" key={idx}>
             <span className="text-white text-md bg-orange/50 w-4 h-4 rounded-full grid place-content-center">
               <BsCheck />
             </span>
@@ -51,7 +50,7 @@ const PlanCard = ({ plan, period }) => {
           plan.name === "Advanced"
             ? "bg-orange hover:bg-black"
             : "bg-black hover:bg-orange"
-        }  text-[15px] font-bold text-white rounded-lg p-3 mt-10 w-full`}
+        }  text-[15px] font-bold text-white transition-all duration-300 rounded-lg p-3 mt-10 w-full`}
       >
         CHOOSE PLAN
       </button>

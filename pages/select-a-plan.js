@@ -48,7 +48,6 @@ const plans = [
 
 const SelectPlan = () => {
   const [activeTab, setActiveTab] = useState("annually");
-  const [period, setPeriod] = useState("monthly");
 
   // const setActive = () => {
 
@@ -68,9 +67,8 @@ const SelectPlan = () => {
             <div
               onClick={() => {
                 setActiveTab("annually");
-                setPeriod("annually");
               }}
-              className={`z-10 ${
+              className={`z-10 cursor-pointer ${
                 activeTab === "annually" ? "text-black" : "text-white"
               }`}
             >
@@ -79,9 +77,8 @@ const SelectPlan = () => {
             <div
               onClick={() => {
                 setActiveTab("monthly");
-                setPeriod("annually");
               }}
-              className={`z-10 ${
+              className={`z-10 cursor-pointer ${
                 activeTab === "monthly" ? "text-black" : "text-white"
               }`}
             >
@@ -90,7 +87,7 @@ const SelectPlan = () => {
           </div>
           <div className="mt-0 md:mt-20 grid md:grid-cols-3 gap-10">
             {plans.map((plan) => (
-              <PlanCard plan={plan} period={period} />
+              <PlanCard plan={plan} period={activeTab} />
             ))}
           </div>
         </div>

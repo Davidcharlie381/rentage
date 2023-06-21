@@ -1,14 +1,15 @@
 import PlacesCard from "@/components/PlacesCard";
 import PropertiesHero from "@/components/PropertiesHero";
 import Layout from "@/layout/layout";
-import image1 from "../public/apartment_3-696x475.jpg"
-import image2 from "../public/apartment_4-696x465.jpg"
-import image3 from "../public/apartment_5-696x413.jpg"
-import image4 from "../public/apartment_6-696x425.jpg"
-import image5 from "../public/apartment_7-696x464.jpg"
-import image6 from "../public/house_8-696x482.jpg"
-import image7 from "../public/house_10-696x464.jpg"
 
+import image1 from "../public/apartment_3-696x475.jpg";
+import image2 from "../public/apartment_4-696x465.jpg";
+import image3 from "../public/apartment_5-696x413.jpg";
+import image4 from "../public/apartment_6-696x425.jpg";
+import image5 from "../public/apartment_7-696x464.jpg";
+import image6 from "../public/house_8-696x482.jpg";
+import image7 from "../public/house_10-696x464.jpg";
+import GridContainer from "@/components/GridContainer";
 
 const properties = [
   {
@@ -73,21 +74,7 @@ const Properties = () => {
   return (
     <Layout>
       <PropertiesHero text="Browse properties" />
-      <section className="container gap-14 mt-14 md:mt-28 md:grid md:grid-cols-4 mb-32 md:mb-48">
-        <div className="hidden md:block">h1nksnk</div>
-        <div className="grid gap-10 md:gap-14 grid-cols-1 md:grid-cols-2 col-span-3">
-          {properties.map((property) => (
-            <PlacesCard
-              image={property.image}
-              house={property.house}
-              location={property.location}
-              price={property.price}
-              duration={property.duration}
-              listing
-            />
-          ))}
-        </div>
-      </section>
+      <GridContainer properties={properties} />
     </Layout>
   );
 };

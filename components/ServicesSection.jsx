@@ -7,9 +7,9 @@ import { SectionHeading } from "./Heading";
 import ServicesCard from "./ServicesCard";
 
 const services = [
-  {title: "For sale", image: image1, link: "", lineGrad: "from-[#C9E8F2] to-[#fff]"},
-  {title: "Hotel based", image: image2, link: "", lineGrad: "from-[#8BAFB9] to-[#91A1A5]"},
-  {title: "Rentals", image: image3, link: "", lineGrad: "from-[#FFB7C9] to-[#fff]"}
+  {title: "For sale", image: image1, link: "transaction/for-sale", lineGrad: "from-[#C9E8F2] to-[#fff]"},
+  {title: "Hotel based", image: image2, link: "transaction/hotel-based", lineGrad: "from-[#8BAFB9] to-[#91A1A5]"},
+  {title: "Rentals", image: image3, link: "transaction/rentals", lineGrad: "from-[#FFB7C9] to-[#fff]"}
 ]
 
 const ServicesSection = () => {

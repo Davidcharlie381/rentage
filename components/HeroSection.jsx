@@ -1,41 +1,53 @@
 import Image from "next/image";
 import { BiSearch } from "react-icons/bi";
-import heroImage from "../public/home_hero.png";
 import { FirstHeading } from "./Heading";
+import Link from "next/link";
 
-const HeroSection = () => {
+const HeroSection = ({ image, home, text, para }) => {
   return (
     <section className="bg-lightBlue pt-14 md:pt-10">
       <div className="container md:flex flex-col md:flex-row justify-center items-center">
-        <div className="md:w-1/2 md:max-w-lg">
-          <FirstHeading text="We're here to help you find your new home"/>
-          <form className="flex mb-3">
-            <input
-              type="text"
-              className="p-3 rounded-bl-md rounded-tl-md w-[90%] md:w-[80%] md:p-5"
-              placeholder="Search for a property..."
-            />
-            <button className="bg-black text-white p-3 md:p-4 text-2xl rounded-br-md rounded-tr-md">
-              <BiSearch />
-            </button>
-          </form>
-          <p className="text-[0.81rem] font-medium">
-            Discover anything from rentals, temporary housings or properties for
-            sale.
-          </p>
+        <div className={`md:w-1/2 md:max-w-lg ${!home && "md:-mt-10"}`}>
+          <FirstHeading text={text} />
+          {home && (
+            <form className="flex mb-3 w-full">
+              <input
+                type="text"
+                className="p-3 rounded-bl-md rounded-tl-md w-[90%] md:w-[90%] md:p-5"
+                placeholder="Search for a property..."
+              />
+              <button className="bg-black text-white p-3 md:p-4 text-2xl rounded-br-md rounded-tr-md">
+                <BiSearch />
+              </button>
+            </form>
+          )}
+          {!home && (
+            <p className="text-[13px] md:text-[15px] font-medium -mt-5 mb-9">{para}</p>
+          )}
+          {home && (
+            <p className="text-[0.81rem] font-medium">
+              Discover anything from rentals, temporary housings or properties
+              for sale.
+            </p>
+          )}
+          {!home && (
+            <Link href="">
+              <h5 className="mt-4 text-orange font-bold text-[13px] leading-[20px] tracking-[0.25em]">EXPLORE</h5>
+            </Link>
+          )}
         </div>
-        <div className="mt-10 ml-20  w-2/3">
+        <div className={`mt-10 md:ml-20  w-full md:w-1/2 ${!home ? "h-52 overflow-hidden md:h-fit" : ""}`}>
           <Image
-            src={heroImage}
+            src={image}
             // width={370}
-            className=" md:w-[570px] md:h-[570px] "
+            className="w-full h-[270px] md:w-[570px] md:h-[570px] "
             height={500}
           />
         </div>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="-mt-[45px] md:-mt-[130px]"
+        className={`-mt-[35px] ${home ? "-mt-[100px] md:-mt-[130px]" : "-mt-[100px] md:-mt-[220px]"}`}
         viewBox="0 0 1440 320"
       >
         <path
