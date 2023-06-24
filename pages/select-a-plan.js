@@ -1,7 +1,7 @@
 import PlanCard from "@/components/PlanCard";
 import PropertiesHero from "@/components/PropertiesHero";
 import Layout from "@/layout/layout";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const plans = [
   {
@@ -49,9 +49,15 @@ const plans = [
 const SelectPlan = () => {
   const [activeTab, setActiveTab] = useState("annually");
 
-  // const setActive = () => {
+  // const tabIndicatorRef = useRef(null);
 
-  // }
+  // const handleTabClick = (tab) => {
+  //   setActiveTab(tab);
+  //   const indicator = tabIndicatorRef.current;
+  //   const tabWidth = indicator.parentElement.offsetWidth / 2;
+  //   const tabPosition = tab === "annually" ? 5 : tabWidth;
+  //   indicator.style.transform = `translateX(${tabPosition - 5}px)`;
+  // };
 
   return (
     <Layout>
@@ -62,7 +68,7 @@ const SelectPlan = () => {
             <span
               className={`absolute inset-0 h-4/5 top-[5.5px] ${
                 activeTab === "annually" ? "left-2" : "left-[126px]"
-              } transition-smooth z-[2] rounded-[30px] w-1/2 bg-white`}
+              } transition-all duration-500 z-[2] rounded-[30px] w-1/2 bg-white`}
             ></span>
             <div
               onClick={() => {
@@ -85,6 +91,32 @@ const SelectPlan = () => {
               MONTHLY
             </div>
           </div>
+
+          {/* <div className="relative flex md:mx-auto justify-center w-fit gap-10 p-4 font-bold text-[.95rem] px-7 rounded-[30px] bg-orange">
+            <span
+              ref={tabIndicatorRef}
+              className={`absolute inset-0 h-4/5 top-[5.5px] ${
+                activeTab === "annually" ? "left-2" : ""
+              } transition-all duration-300 z-[2] rounded-[30px] w-1/2 bg-white`}
+            ></span>
+            <div
+              onClick={() => handleTabClick("annually")}
+              className={`z-10 cursor-pointer ${
+                activeTab === "annually" ? "text-black" : "text-white"
+              }`}
+            >
+              ANNUALLY
+            </div>
+            <div
+              onClick={() => handleTabClick("monthly")}
+              className={`z-10 cursor-pointer ${
+                activeTab === "monthly" ? "text-black" : "text-white"
+              }`}
+            >
+              MONTHLY
+            </div>
+          </div> */}
+
           <div className="mt-0 md:mt-20 grid md:grid-cols-3 gap-10">
             {plans.map((plan) => (
               <PlanCard plan={plan} period={activeTab} />

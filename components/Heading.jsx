@@ -7,7 +7,7 @@ const SectionHeading = ({ text, underline, para }) => {
       {underline && (
         <div className="bg-orange h-[3px] mb-6 md:mb-9 w-[100px] mx-auto" />
       )}
-      <p className="text-center text-sm md:max-w-2xl mx-auto font-medium">
+      <p className="text-center text-base md:max-w-3xl mx-auto font-medium">
         {para}
       </p>
     </>

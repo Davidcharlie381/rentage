@@ -3,8 +3,10 @@ import { CgClose } from "react-icons/cg";
 import NavLink from "./NavLink";
 
 const NavBar = ({handleClose, open}) => {
+
+
   return (
-    <section className={`${open ? "-left-[100vh]" : "left-0"} md:hidden fixed z-[999] bg-lightBlue opacity-[0.97] w-screen h-screen inset-0`}>
+    <section className={`md:hidden ${open ? "-left-[100vh]" : "left-0"} fixed z-[999] transiton-all duration-500 bg-lightBlue opacity-[0.97] w-screen h-screen inset-0`}>
       <div className="container flex flex-col gap-10 pt-5">
         <div className="text-3xl flex flex-row-reverse" onClick={handleClose}>
           <CgClose />
