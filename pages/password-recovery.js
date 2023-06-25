@@ -4,7 +4,7 @@ import React from "react";
 
 const PasswordRecovery = () => {
   return (
-    <Layout>
+    <Layout title="Login/Register | RENTAGE">
       <RecoverySection />
     </Layout>
   );

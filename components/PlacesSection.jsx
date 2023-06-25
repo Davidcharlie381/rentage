@@ -35,7 +35,7 @@ const places = [
 const PlacesSection = () => {
   return (
     <section className="bg-dullBlue -mt-2 md:mt-0">
-      <div className="container">
+      <div className="container  mb-32">
         <div>
           <SectionHeading text="Popular places" underline />
         </div>

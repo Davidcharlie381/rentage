@@ -100,7 +100,7 @@ const ForSale = () => {
   // }, []);
 
   return (
-    <Layout>
+    <Layout title={`${currentPage.name} | Transaction type | RENTAGE`}>
       <HeroSection
         text={currentPage.name}
         para="Aliquam consectetur nibh vitae tellus gravida mattis. Nullam aliquet felis nisl, nec iaculis erat bibendum a. Etiam quis euismod augue. Nulla ornare libero sapien. Nullam aliquam massa eu nulla consequat."

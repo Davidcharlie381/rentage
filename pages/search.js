@@ -1,6 +1,6 @@
-import PlacesCard from "@/components/PlacesCard";
-import PropertiesHero from "@/components/PropertiesHero";
+import SearchHero from "@/components/SearchHero";
 import Layout from "@/layout/layout";
+import GridContainer from "@/components/GridContainer";
 
 import image1 from "../public/apartment_3-696x475.jpg";
 import image2 from "../public/apartment_4-696x465.jpg";
@@ -9,7 +9,7 @@ import image4 from "../public/apartment_6-696x425.jpg";
 import image5 from "../public/apartment_7-696x464.jpg";
 import image6 from "../public/house_8-696x482.jpg";
 import image7 from "../public/house_10-696x464.jpg";
-import GridContainer from "@/components/GridContainer";
+import { useRouter } from "next/router";
 
 const properties = [
   {
@@ -70,13 +70,17 @@ const properties = [
   },
 ];
 
-const Properties = () => {
+const Search = () => {
+  const router = useRouter();
+
+  const query = router.query.q;
+
   return (
-    <Layout title="Properties | RENTAGE">
-      <PropertiesHero text="Browse properties" />
-      <GridContainer properties={properties} />
+    <Layout title={`${query} | Search Results | RENTAGE`}>
+      <SearchHero text="Search:" />
+      <GridContainer properties={properties} searchPage />
     </Layout>
   );
 };
 
-export default Properties;
+export default Search;

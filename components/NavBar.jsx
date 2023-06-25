@@ -16,9 +16,9 @@ const NavBar = ({handleClose, open}) => {
         </div>
         <div className="font-bold">
           <ul className="flex gap-6 flex-col pl-2">
-            <NavLink path="/" name="Home" nav />
-            <NavLink path="/properties" name="Browse properties" nav />
-            <NavLink path="add-property" name="Add your own listing" nav />
+            <NavLink path="/" name="Home" nav handleClose={handleClose}/>
+            <NavLink path="/properties" name="Browse properties" nav handleClose={handleClose}/>
+            <NavLink path="/add-property" name="Add your own listing" nav handleClose={handleClose}/>
           </ul>
         </div>
       </div>

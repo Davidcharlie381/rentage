@@ -60,7 +60,7 @@ const SelectPlan = () => {
   // };
 
   return (
-    <Layout>
+    <Layout title="Select a plan | RENTAGE">
       <PropertiesHero text="Select a plan" />
       <section className="md:pt-32 md:pb-28 py-16">
         <div className="container">

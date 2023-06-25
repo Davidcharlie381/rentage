@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const LoginSection = () => {
@@ -15,7 +16,7 @@ const LoginSection = () => {
             <input type="text" id="password" className="w-full border-2 rounded-md p-2 px-3" />
           </div>
           <div className="flex flex-row-reverse">
-            <span className="text-[12px] font-semibold text-orange hover:text-black">Forgot password?</span>
+            <Link href="/password-recovery" className="text-[12px] font-semibold text-orange hover:text-black">Forgot password?</Link>
           </div>
           <button type="submit" className="bg-orange w-[100px] text-white p-[10px] mt-10 font-semibold mx-auto block px-5 rounded-lg hover:bg-black">Log In</button>
         </form>

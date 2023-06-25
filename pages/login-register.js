@@ -4,7 +4,7 @@ import React from 'react'
 
 const LoginRegister = () => {
   return (
-    <Layout>
+    <Layout title="Login/Register | RENTAGE">
         <LoginSection />
     </Layout>
   )

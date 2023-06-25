@@ -1,10 +1,12 @@
+import AddPropertyGrid from "@/components/AddPropertyGrid";
 import PropertiesHero from "@/components/PropertiesHero";
 import Layout from "@/layout/layout";
 
 const AddProperty = () => {
   return (
-    <Layout>
+    <Layout title="Add property | RENTAGE">
       <PropertiesHero text="Add property" />
+      <AddPropertyGrid />
     </Layout>
   );
 };

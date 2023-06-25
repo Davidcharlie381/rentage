@@ -2,8 +2,9 @@ import FooterSection from "@/components/FooterSection";
 import Header from "@/components/Header";
 import NavBar from "@/components/NavBar";
 import { useState } from "react";
+import Meta from "./meta";
 
-const Layout = ({ children }) => {
+const Layout = ({ title, description, children }) => {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => {
@@ -19,7 +20,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <meta />
+      <Meta title={title} description={description} />
       <Header handleClose={handleClose} />
       <NavBar handleClose={handleClose} open={open} />
       <main>{children}</main>
