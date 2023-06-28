@@ -1,11 +1,11 @@
 import React from "react";
 
-const SectionHeading = ({ text, underline, para }) => {
+const SectionHeading = ({ text, where, underline, para }) => {
   return (
     <>
-      <SecondHeading text={text} />
+      <SecondHeading text={text} where={where}/>
       {underline && (
-        <div className="bg-orange h-[3px] mb-6 md:mb-9 w-[100px] mx-auto" />
+        <div className={`bg-orange h-[3px] mb-6 md:mb-9 w-[100px] ${where !== "author" ? "mx-auto" : ""}`} />
       )}
       <p className="text-center text-sm md:text-base md:max-w-3xl mx-auto font-medium">
         {para}
@@ -22,9 +22,9 @@ const FirstHeading = ({ text, searchText }) => {
   );
 };
 
-const SecondHeading = ({ text }) => {
+const SecondHeading = ({ text, where }) => {
   return (
-    <h2 className="text-[1.75rem] leading-9 md:leading-[52px] md:max-w-xl mx-auto md:text-[2.75rem] mb-4 md:mb-6 font-extrabold text-center ">
+    <h2 className={`text-[1.75rem] leading-9 md:leading-[52px] ${where !== "author" ? "md:max-w-3xl": ""} ${where !== "author" ? "mx-auto text-center" : ""} md:text-[2.75rem] mb-4 md:mb-6 font-extrabold`}>
       {text}
     </h2>
   );
