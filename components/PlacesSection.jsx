@@ -4,6 +4,7 @@ import image3 from "../public/apartment_3-696x475.jpg";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { SectionHeading } from "./Heading";
 import PlacesCard from "./PlacesCard";
+import { useState } from "react";
 
 const places = [
   {
@@ -13,6 +14,7 @@ const places = [
     price: "$5600",
     duration: "Per month",
     rating: "",
+    link: "/properties/house-10",
   },
   {
     image: image2,
@@ -21,6 +23,7 @@ const places = [
     price: "$250",
     duration: "Per week",
     rating: "",
+    link: "/properties/apartment-3",
   },
   {
     image: image3,
@@ -29,10 +32,13 @@ const places = [
     price: "$40400",
     duration: "Per year",
     rating: "",
+    link: "properties/apartment-5",
   },
 ];
 
 const PlacesSection = () => {
+  const [searchText, setSearchText] = useState("");
+
   return (
     <section className="bg-dullBlue -mt-2 md:mt-0">
       <div className="container  mb-32">
@@ -48,18 +54,24 @@ const PlacesSection = () => {
               price={place.price}
               duration={place.duration}
               rating={place.rating}
+              link={place.link}
             />
           ))}
         </div>
       </div>
       <div className="w-full md:w-[90%] md:max-w-7xl mx-auto bg-lightBlue mt-20 p-5 py-16 md:py-24">
-        <form className="flex mb-3 mx-auto md:w-2/3">
+        <form
+          className="flex mb-3 mx-auto md:w-2/3"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <input
             type="text"
             className="p-4 rounded-bl-md rounded-tl-md w-2/3 text-sm md:w-[80%] md:p-6"
             placeholder="Your email address"
+            required
+            onChange={(e) => setSearchText(e.target.value)}
           />
-          <button className="bg-orange font-extrabold text-white text-sm w-1/3 md:w-[20%] px-2 py-3 md:p-4 rounded-br-md rounded-tr-md">
+          <button className="bg-orange hover:bg-black transition-smooth font-extrabold text-white text-sm w-1/3 md:w-[20%] px-2 py-3 md:p-4 rounded-br-md rounded-tr-md">
             SUBSCRIBE
           </button>
         </form>

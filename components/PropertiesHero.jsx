@@ -32,7 +32,10 @@ const PropertiesHero = ({ text, author, house }) => {
                 )}
                 {author && (
                   <div className="flex gap-3 items-center mb-3 text-[#5b5b5b] font-medium text-sm md:text-[15px]">
-                    Agency:<span className="text-black hover:text-orange">California</span>
+                    Agency:
+                    <span className="text-black hover:text-orange">
+                      California
+                    </span>
                   </div>
                 )}
 
@@ -53,20 +56,22 @@ const PropertiesHero = ({ text, author, house }) => {
               </div>
             )}
           </div>
-          <div className="flex gap-2 text-white">
-            <div className="bg-black p-3">
-              <FaFacebookF />
+          {(author || house) && (
+            <div className="flex gap-2 text-white">
+              <div className="bg-black p-3">
+                <FaFacebookF />
+              </div>
+              <div className="bg-black p-3">
+                <FaTwitter />
+              </div>
+              <div className="bg-black p-3">
+                <FaWhatsapp />
+              </div>
+              <div className="bg-black p-3">
+                <FaTwitter />
+              </div>
             </div>
-            <div className="bg-black p-3">
-              <FaTwitter />
-            </div>
-            <div className="bg-black p-3">
-              <FaWhatsapp />
-            </div>
-            <div className="bg-black p-3">
-              <FaTwitter />
-            </div>
-          </div>
+          )}
         </div>
       </div>
       {(author || house) && (

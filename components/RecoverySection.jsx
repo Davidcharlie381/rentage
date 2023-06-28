@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const RecoverySection = () => {
+  const [email, setEmail] = useState("");
+
   return (
     <section className="py-20">
       <div className="container place-content-center">
         <form
           action=""
           className="p-10 flex flex-col justify-center max-w-lg mx-auto"
+          onSubmit={(e) => e.preventDefault()}
         >
           <h3 className="text-[20px] font-medium leading-6 tracking-wider mb-10">
             Password Recovery
@@ -22,6 +25,9 @@ const RecoverySection = () => {
               type="text"
               id="email"
               className="w-full border-2 rounded-md p-2 px-3"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 

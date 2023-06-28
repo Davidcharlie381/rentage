@@ -5,3 +5,7 @@
 .container {
     @apply mx-auto w-[90%] md:w-[88%] max-w-7xl;
 }
+
+.transition-smooth {
+    @apply transition-all duration-300;
+}

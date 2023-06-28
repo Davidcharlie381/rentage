@@ -48,7 +48,7 @@ const Header = ({handleClose}) => {
             </ul>
           </div>
           <div className="flex items-center gap-5">
-            <Link href="/select-a-plan" className="md:hidden font-bold text-orange text-[15px]">
+            <Link href="/select-a-plan" className="md:hidden font-bold text-orange hover:texblack text-[15px]">
               Subscribe
             </Link>
             <div className="md:hidden text-4xl" onClick={handleClose}>

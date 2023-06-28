@@ -30,13 +30,13 @@ const FooterSection = () => {
         </div>
         <div>
           <ul className="flex justify-between items-center gap-4">
-            <li className="rounded-full p-2 border-2 border-black">
+            <li className="rounded-full hover:border-orange hover:text-orange p-2 border-2 border-black">
               <FaFacebookF />
             </li>
-            <li className="rounded-full p-2 border-2 border-black">
+            <li className="rounded-full hover:border-orange hover:text-orange p-2 border-2 border-black">
               <FaInstagram />
             </li>
-            <li className="rounded-full p-2 border-2 border-black">
+            <li className="rounded-full hover:border-orange hover:text-orange p-2 border-2 border-black">
               <FaTwitter />
             </li>
           </ul>
@@ -44,10 +44,10 @@ const FooterSection = () => {
       </div>
       <div className="flex justify-center items-center py-12 md:py-20">
         <ul className="flex flex-wrap text-sm font-medium justify-center gap-5 md:gap-10 items-center">
-          <li>Privacy policy</li>
-          <li>Terms & conditions</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li className="text-black hover:text-orange transition-smooth">Privacy policy</li>
+          <li className="text-black hover:text-orange transition-smooth">Terms & conditions</li>
+          <li className="text-black hover:text-orange transition-smooth">About</li>
+          <li className="text-black hover:text-orange transition-smooth">Contact</li>
         </ul>
       </div>
     </section>

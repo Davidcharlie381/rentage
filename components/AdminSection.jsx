@@ -12,12 +12,10 @@ import image5 from "../public/apartment_7-696x464.jpg";
 import image6 from "../public/house_8-696x482.jpg";
 import image7 from "../public/house_10-696x464.jpg";
 
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaLink } from "react-icons/fa";
 
-import {BsFillTelephoneFill} from "react-icons/bs";
-import {FaLink} from "react-icons/fa";
-
-import {MdMail} from "react-icons/md";
-
+import { MdMail } from "react-icons/md";
 
 const properties = [
   {
@@ -27,6 +25,10 @@ const properties = [
     price: "$5600",
     duration: "Per month",
     rating: "",
+    link: "/properties/house-10",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image2,
@@ -35,6 +37,10 @@ const properties = [
     price: "$250",
     duration: "Per week",
     rating: "",
+    link: "/properties/apartment-3",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image3,
@@ -43,6 +49,10 @@ const properties = [
     price: "$40400",
     duration: "Per year",
     rating: "",
+    link: "/properties/apartment-5",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image4,
@@ -51,6 +61,10 @@ const properties = [
     price: "$5600",
     duration: "Per month",
     rating: "",
+    link: "/properties/house-10",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image5,
@@ -59,6 +73,10 @@ const properties = [
     price: "$250",
     duration: "Per week",
     rating: "",
+    link: "/properties/apartment-3",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image6,
@@ -67,6 +85,10 @@ const properties = [
     price: "$40400",
     duration: "Per year",
     rating: "",
+    link: "/properties/apartment-5",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image7,
@@ -74,7 +96,11 @@ const properties = [
     location: "Seattle, Washington, United States",
     price: "$40400",
     duration: "Per year",
-    rating: "",
+    rating: "/properties/apartment-5",
+    link: "",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
 ];
 
@@ -92,15 +118,21 @@ const AdminSection = () => {
           <div className="border-2 rounded-2xl grid md:grid-cols-2 p-5 md:p-8 gap-6">
             <div className="space-y-1">
               <h3 className="text-[22px] md:text-2xl font-extrabold flex gap-4 items-center">
-                <span><BsFillTelephoneFill /></span> 202-555-0158
+                <span>
+                  <BsFillTelephoneFill />
+                </span>{" "}
+                202-555-0158
               </h3>
               <p className="text-[13px] md:text-sm text-black/50 font-bold">
-              Phone number
+                Phone number
               </p>
             </div>
             <div className="space-y-1">
               <h3 className="text-[22px] md:text-2xl font-extrabold flex gap-4 items-center">
-              <span><MdMail /></span> test@test.com
+                <span>
+                  <MdMail />
+                </span>{" "}
+                test@test.com
               </h3>
               <p className="text-[13px] md:text-sm text-black/50 font-bold">
                 Email
@@ -108,7 +140,10 @@ const AdminSection = () => {
             </div>
             <div className="space-y-1">
               <h3 className="text-[22px] md:text-2xl font-extrabold flex gap-4 items-center">
-              <span><FaLink /></span> https://example.com
+                <span>
+                  <FaLink />
+                </span>{" "}
+                https://example.com
               </h3>
               <p className="text-[13px] md:text-sm text-black/50 font-bold">
                 Website

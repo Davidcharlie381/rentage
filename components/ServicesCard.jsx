@@ -12,7 +12,7 @@ const ServicesCard = ({ title, image, link, lineGrad }) => {
         </h3>
         <div className="bg-black h-[1px] mx-auto w-16" />
         <Link href={link}>
-          <h5 className="mt-4 text-orange font-bold text-[13px] leading-[20px] tracking-[0.25em]">EXPLORE</h5>
+          <h5 className="mt-4 text-orange hover:text-black transition-smooth font-bold text-[13px] leading-[20px] tracking-[0.25em]">EXPLORE</h5>
         </Link>
       </div>
 

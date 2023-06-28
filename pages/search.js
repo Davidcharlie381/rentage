@@ -19,6 +19,10 @@ const properties = [
     price: "$5600",
     duration: "Per month",
     rating: "",
+    link: "/properties/house-10",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image2,
@@ -27,6 +31,10 @@ const properties = [
     price: "$250",
     duration: "Per week",
     rating: "",
+    link: "/properties/apartment-3",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image3,
@@ -35,6 +43,10 @@ const properties = [
     price: "$40400",
     duration: "Per year",
     rating: "",
+    link: "/properties/apartment-5",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image4,
@@ -43,6 +55,10 @@ const properties = [
     price: "$5600",
     duration: "Per month",
     rating: "",
+    link: "/properties/house-10",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image5,
@@ -51,6 +67,10 @@ const properties = [
     price: "$250",
     duration: "Per week",
     rating: "",
+    link: "/properties/apartment-3",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image6,
@@ -59,6 +79,10 @@ const properties = [
     price: "$40400",
     duration: "Per year",
     rating: "",
+    link: "/properties/apartment-5",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
   {
     image: image7,
@@ -66,7 +90,11 @@ const properties = [
     location: "Seattle, Washington, United States",
     price: "$40400",
     duration: "Per year",
-    rating: "",
+    rating: "/properties/apartment-5",
+    link: "",
+    noOfBeds: 4,
+    noOfBaths: 2,
+    livingArea: "125 m2",
   },
 ];
 

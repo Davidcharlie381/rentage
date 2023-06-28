@@ -31,7 +31,7 @@ const HeroSection = ({ image, home, text, para }) => {
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
               />
-              <button className="bg-black text-white p-3 md:p-4 text-2xl rounded-br-md rounded-tr-md">
+              <button className="bg-black hover:bg-orange transition-smooth text-white p-3 md:p-4 text-2xl rounded-br-md rounded-tr-md">
                 <BiSearch />
               </button>
             </form>
