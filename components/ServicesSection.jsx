@@ -24,7 +24,7 @@ const ServicesSection = () => {
           amet enim eget est dictum vehicula."
         />
         <div className="grid gap-10 grid-cols-1 md:grid-cols-3 mt-10 md:mt-24">
-          {services.map((service) => <ServicesCard title={service.title} image={service.image} link={service.link} lineGrad={service.lineGrad}/>)}
+          {services.map((service) => <ServicesCard title={service.title} image={service.image} link={service.link} lineGrad={service.lineGrad} key={services.link}/>)}
           
         </div>
       </div>
@@ -35,7 +35,7 @@ const ServicesSection = () => {
       >
         <path
           fill="#E7F0F1"
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,288L120,245.3C240,203,480,117,720,90.7C960,64,1200,96,1320,112L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
         ></path>
       </svg>

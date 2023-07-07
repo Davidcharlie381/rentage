@@ -48,7 +48,7 @@ const HeroSection = ({ image, home, text, para }) => {
             </p>
           )}
           {!home && (
-            <Link href="">
+            <Link href="#content">
               <h5 className="mt-4 text-orange font-bold text-[13px] leading-[20px] tracking-[0.25em]">
                 EXPLORE
               </h5>

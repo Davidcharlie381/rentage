@@ -1,110 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { SectionHeading } from "./Heading";
-import admin from "../public/theresa_simpson-1.jpg";
 import GridContainer from "./GridContainer";
-
-import image1 from "../public/apartment_3-696x475.jpg";
-import image2 from "../public/apartment_4-696x465.jpg";
-import image3 from "../public/apartment_5-696x413.jpg";
-import image4 from "../public/apartment_6-696x425.jpg";
-import image5 from "../public/apartment_7-696x464.jpg";
-import image6 from "../public/house_8-696x482.jpg";
-import image7 from "../public/house_10-696x464.jpg";
 
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLink } from "react-icons/fa";
 
 import { MdMail } from "react-icons/md";
 
-const properties = [
-  {
-    image: image1,
-    house: "House 10",
-    location: "San Jose, California, United States",
-    price: "$5600",
-    duration: "Per month",
-    rating: "",
-    link: "/properties/house-10",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-  {
-    image: image2,
-    house: "Apartment 3",
-    location: "Portland, Oregon, United States",
-    price: "$250",
-    duration: "Per week",
-    rating: "",
-    link: "/properties/apartment-3",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-  {
-    image: image3,
-    house: "Apartment 5",
-    location: "Seattle, Washington, United States",
-    price: "$40400",
-    duration: "Per year",
-    rating: "",
-    link: "/properties/apartment-5",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-  {
-    image: image4,
-    house: "House 10",
-    location: "San Jose, California, United States",
-    price: "$5600",
-    duration: "Per month",
-    rating: "",
-    link: "/properties/house-10",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-  {
-    image: image5,
-    house: "Apartment 3",
-    location: "Portland, Oregon, United States",
-    price: "$250",
-    duration: "Per week",
-    rating: "",
-    link: "/properties/apartment-3",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-  {
-    image: image6,
-    house: "Apartment 5",
-    location: "Seattle, Washington, United States",
-    price: "$40400",
-    duration: "Per year",
-    rating: "",
-    link: "/properties/apartment-5",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-  {
-    image: image7,
-    house: "Apartment 5",
-    location: "Seattle, Washington, United States",
-    price: "$40400",
-    duration: "Per year",
-    rating: "/properties/apartment-5",
-    link: "",
-    noOfBeds: 4,
-    noOfBaths: 2,
-    livingArea: "125 m2",
-  },
-];
 
-const AdminSection = () => {
+const AdminSection = ({ author, properties }) => {
   return (
     <section className="mt-8 md:-mt-16">
       <div className="container grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 md:mb-28">
@@ -121,7 +26,7 @@ const AdminSection = () => {
                 <span>
                   <BsFillTelephoneFill />
                 </span>{" "}
-                202-555-0158
+                {author.phone}
               </h3>
               <p className="text-[13px] md:text-sm text-black/50 font-bold">
                 Phone number
@@ -132,7 +37,7 @@ const AdminSection = () => {
                 <span>
                   <MdMail />
                 </span>{" "}
-                test@test.com
+                {author.email}
               </h3>
               <p className="text-[13px] md:text-sm text-black/50 font-bold">
                 Email
@@ -143,7 +48,7 @@ const AdminSection = () => {
                 <span>
                   <FaLink />
                 </span>{" "}
-                https://example.com
+                {author.website}
               </h3>
               <p className="text-[13px] md:text-sm text-black/50 font-bold">
                 Website
@@ -152,7 +57,7 @@ const AdminSection = () => {
           </div>
         </div>
         <div className="col-span-1 w-[335px] relative h-80 rounded-xl overflow-hidden">
-          <Image src={admin} fill={true} />
+          <Image src={author.avatar} fill={true} />
         </div>
       </div>
       <div className="container">

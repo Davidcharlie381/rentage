@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }) {
       <style jsx global>{`
         html {
           font-family: ${mont.style.fontFamily};
+
         }
       `}</style>
       <div>

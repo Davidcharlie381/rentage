@@ -42,7 +42,7 @@ const Header = ({handleClose}) => {
             </Link>
             <ul className="md:flex justify-between gap-10 text-[15px] leading-5 font-bold hidden">
               {links.map((link) => (
-                <NavLink path={link.path} name={link.name} />
+                <NavLink path={link.path} name={link.name} key={link.name} />
               ))}
               <Link href="/select-a-plan" className="font-bold text-orange">Subscribe</Link>
             </ul>

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FirstHeading } from "./Heading";
 
@@ -9,6 +9,10 @@ const SearchHero = ({ text }) => {
   const router = useRouter();
 
   const query = router.query.q;
+
+  // useEffect(() => {
+  //   console.log(router.query);
+  // }, [searchText]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
