@@ -24,7 +24,7 @@ const ServicesSection = () => {
           amet enim eget est dictum vehicula."
         />
         <div className="grid gap-10 grid-cols-1 md:grid-cols-3 mt-10 md:mt-24">
-          {services.map((service) => <ServicesCard title={service.title} image={service.image} link={service.link} lineGrad={service.lineGrad} key={services.link}/>)}
+          {services.map((service) => <ServicesCard title={service.title} image={service.image} link={service.link} lineGrad={service.lineGrad} key={service.link}/>)}
           
         </div>
       </div>

@@ -64,6 +64,8 @@ const HeroSection = ({ image, home, text, para }) => {
             src={image}
             // width={370}
             className="w-full h-[270px] md:w-[570px] md:h-[570px] "
+            priority
+            alt="HeroImage"
             height={500}
           />
         </div>

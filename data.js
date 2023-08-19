@@ -11,6 +11,10 @@ import image10 from "./public/apartment_10-696x493.jpg";
 import image11 from "./public/apartment_11-696x491.jpg";
 import image12 from "./public/apartment_12-696x450.jpg";
 
+import hero1 from "./public/for_sale-1.png";
+import hero2 from "./public/temporary_housing.png";
+import hero3 from "./public/rentals.png";
+
 import admin from "./public/theresa_simpson-1.jpg";
 
 const properties = [
@@ -382,5 +386,34 @@ const authors = [
   },
 ];
 
+const pages = [
 
-export { properties, authors };
+  {
+    name: "For sale",
+    id: "for-sale",
+    properties: properties.filter(
+      (property) => property.transaction === "for-sale"
+    ),
+    heroImage: hero1,
+  },
+  {
+    name: "Hotel based",
+    id: "hotel-based",
+    properties: properties.filter(
+      (property) => property.transaction === "hotel-based"
+    ),
+    heroImage: hero2,
+  },
+  {
+    name: "Rentals",
+    id: "rentals",
+    properties: properties.filter(
+      (property) => property.transaction === "rentals"
+    ),
+    heroImage: hero3,
+  },
+
+]
+
+
+export { properties, authors, pages };

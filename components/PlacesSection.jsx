@@ -55,6 +55,7 @@ const PlacesSection = () => {
               duration={place.duration}
               rating={place.rating}
               link={place.link}
+              key={place.link}
             />
           ))}
         </div>

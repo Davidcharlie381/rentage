@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import React, { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/layout/layout";
 
 import hero1 from "../../public/for_sale-1.png";
@@ -9,39 +9,61 @@ import hero3 from "../../public/rentals.png";
 import GridContainer from "@/components/GridContainer";
 import { useRouter } from "next/router";
 
-import { properties } from "@/data";
+import { BASE_URL } from "@/config";
 
-const pages = [
-  {
-    name: "For sale",
-    id: "for-sale",
-    properties: properties.filter(
-      (property) => property.transaction === "for-sale"
-    ),
-    heroImage: hero1,
-  },
-  {
-    name: "Hotel based",
-    id: "hotel-based",
-    properties: properties.filter(
-      (property) => property.transaction === "hotel-based"
-    ),
-    heroImage: hero2,
-  },
-  {
-    name: "Rentals",
-    id: "rentals",
-    properties: properties.filter(
-      (property) => property.transaction === "rentals"
-    ),
-    heroImage: hero3,
-  },
-];
+export async function getServerSideProps(context) {
+  const { id } = context.params;
 
-const ForSale = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  const currentPage = pages.find((page) => page.id === id);
+  const res = await fetch(`${BASE_URL}/transaction/${id}`);
+  const currentPage = await res.json();
+  return {
+    props: {
+      currentPage,
+    },
+  };
+}
+
+// import { properties } from "@/data";
+
+// const pages = [
+//   {
+//     name: "For sale",
+//     id: "for-sale",
+//     properties: properties.filter(
+//       (property) => property.transaction === "for-sale"
+//     ),
+//     heroImage: hero1,
+//   },
+//   {
+//     name: "Hotel based",
+//     id: "hotel-based",
+//     properties: properties.filter(
+//       (property) => property.transaction === "hotel-based"
+//     ),
+//     heroImage: hero2,
+//   },
+//   {
+//     name: "Rentals",
+//     id: "rentals",
+//     properties: properties.filter(
+//       (property) => property.transaction === "rentals"
+//     ),
+//     heroImage: hero3,
+//   },
+// ];
+
+const ForSale = ({currentPage}) => {
+  // const router = useRouter();
+  // const { id } = router.query;
+
+  // const [currentPage, setCurrentPage] = useState({});
+
+  // useEffect(() => {
+  //   let thisPage = pages.find((page) => page.id === id);
+  //   setCurrentPage(thisPage);
+  //   // console.log(thisPage);
+  // }, [currentPage, id]);
+  // console.log(currentPage)
 
   return (
     <Layout title={`${currentPage.name} | Transaction type | RENTAGE`}>
@@ -52,6 +74,7 @@ const ForSale = () => {
       />
       <GridContainer properties={currentPage.properties} />
     </Layout>
+    // <div>{currentPage.name}</div>
   );
 };
 

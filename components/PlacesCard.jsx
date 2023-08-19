@@ -23,7 +23,7 @@ const PlacesCard = ({
     <div className="bg-white group overflow-hidden rounded-xl">
       <Link href={link}>
         <div className="relative h-60 w-full rounded-t-xl overflow-hidden">
-          <Image src={image} alt={image} className="absolute" fill />
+          <Image src={image} alt="Place" className="absolute" />
         </div>
 
         <div className={`${listing && "border-x-2"} px-6 pt-7 pb-5`}>
