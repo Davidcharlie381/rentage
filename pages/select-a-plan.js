@@ -119,7 +119,7 @@ const SelectPlan = () => {
 
           <div className="mt-0 md:mt-20 grid md:grid-cols-3 gap-10">
             {plans.map((plan) => (
-              <PlanCard plan={plan} period={activeTab} />
+              <PlanCard plan={plan} period={activeTab} key={plan.name} />
             ))}
           </div>
         </div>
