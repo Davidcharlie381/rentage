@@ -13,8 +13,8 @@ export default function handler(req, res) {
 
   const filtered = properties.filter(
     (property) =>
-      property.house.toLowerCase().includes(q) ||
-      property.location.toLowerCase().includes(q)
+      property.house.toLowerCase().includes(q.toLowerCase()) ||
+      property.location.toLowerCase().includes(q.toLowerCase())
   );
 
   res.status(200).json(filtered);
