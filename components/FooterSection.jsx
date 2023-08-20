@@ -50,6 +50,7 @@ const FooterSection = () => {
           <li className="text-black hover:text-orange transition-smooth">Contact</li>
         </ul>
       </div>
+      <small className="text-center text-sm">Built by @davidCharlie</small>
     </section>
   );
 };
