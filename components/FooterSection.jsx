@@ -50,7 +50,7 @@ const FooterSection = () => {
           <li className="text-black hover:text-orange transition-smooth">Contact</li>
         </ul>
       </div>
-      <small className="text-center text-sm block mx-auto pb-5">Built by @devCharlie</small>
+      <small className="text-center text-sm block mx-auto pb-5">Built by <a href="https://x.com/davidcharlie_" target="_blank" rel="noopener noreferrer">@devCharlie<a/></small>
     </section>
   );
 };
